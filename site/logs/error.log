@@ -10669,3 +10669,9 @@ NameError: name 'ResourceWarning' is not defined
 [Thu Jul 30 20:10:44.960277 2020] [wsgi:error] [pid 14207:tid 139930558449408] [remote 213.180.203.114:49002] Not Found: /dashboard.html
 [Thu Jul 30 20:30:43.993133 2020] [wsgi:error] [pid 14207:tid 139930575234816] [remote 213.180.203.176:43224] Not Found: /product_detail.html
 [Thu Jul 30 20:33:22.943604 2020] [wsgi:error] [pid 14207:tid 139930575234816] [remote 128.14.209.242:32904] Not Found: /webfig/
+[Thu Jul 30 22:55:06.622380 2020] [wsgi:error] [pid 14207:tid 139930575234816] [remote 178.154.200.132:39030] Not Found: /robots.txt
+[Thu Jul 30 22:55:10.547702 2020] [wsgi:error] [pid 14207:tid 139930566842112] [remote 178.154.200.132:39030] Not Found: /robots.txt
+[Thu Jul 30 23:00:39.101205 2020] [wsgi:error] [pid 14207:tid 139930566842112] [remote 176.112.246.50:46422] Not Found: /favicon.ico
+[Thu Jul 30 23:57:53.737500 2020] [wsgi:error] [pid 14207:tid 139930566842112] [remote 176.112.246.50:48072] Not Found: /favicon.ico
+[Thu Jul 30 23:58:04.894054 2020] [wsgi:error] [pid 14207:tid 139930566842112] [remote 176.112.246.50:48082] Not Found: /favicon.ico
+[Thu Jul 30 23:58:17.505836 2020] [wsgi:error] [pid 14207:tid 139930566842112] [remote 176.112.246.50:48100] Not Found: /favicon.ico

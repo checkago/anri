@@ -1,8 +1,8 @@
--- MySQL dump 10.13  Distrib 5.7.30, for Linux (x86_64)
+-- MySQL dump 10.13  Distrib 5.7.31, for Linux (x86_64)
 --
 -- Host: localhost    Database: anri
 -- ------------------------------------------------------
--- Server version	5.7.30-0ubuntu0.18.04.1
+-- Server version	5.7.31-0ubuntu0.18.04.1
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
@@ -206,7 +206,7 @@ CREATE TABLE `django_admin_log` (
   KEY `django_admin_log_user_id_c564eba6_fk_auth_user_id` (`user_id`),
   CONSTRAINT `django_admin_log_content_type_id_c4bce8eb_fk_django_co` FOREIGN KEY (`content_type_id`) REFERENCES `django_content_type` (`id`),
   CONSTRAINT `django_admin_log_user_id_c564eba6_fk_auth_user_id` FOREIGN KEY (`user_id`) REFERENCES `auth_user` (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=18 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=32 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -215,7 +215,7 @@ CREATE TABLE `django_admin_log` (
 
 LOCK TABLES `django_admin_log` WRITE;
 /*!40000 ALTER TABLE `django_admin_log` DISABLE KEYS */;
-INSERT INTO `django_admin_log` VALUES (1,'2020-07-29 15:28:38.283023','1','Магазин АНРИ',1,'[{\"added\": {}}]',12,1),(2,'2020-07-29 17:28:43.910953','1','Слайдер 1',1,'[{\"added\": {}}]',15,1),(3,'2020-07-29 17:30:09.118559','2','Слайдер 2',1,'[{\"added\": {}}]',15,1),(4,'2020-07-29 17:32:51.746348','1','Баннер',1,'[{\"added\": {}}]',7,1),(5,'2020-07-29 17:32:56.639406','1','Баннер',2,'[{\"changed\": {\"fields\": [\"\\u041e\\u043f\\u0443\\u0431\\u043b\\u0438\\u043a\\u043e\\u0432\\u0430\\u043d \\u043d\\u0430 \\u0433\\u043b\\u0430\\u0432\\u043d\\u043e\\u0439\"]}}]',7,1),(6,'2020-07-29 17:33:28.717460','1','Баннер',2,'[{\"changed\": {\"fields\": [\"\\u0418\\u0437\\u043e\\u0431\\u0440\\u0430\\u0436\\u0435\\u043d\\u0438\\u0435 \\u0431\\u0430\\u043d\\u043d\\u0435\\u0440\\u0430\"]}}]',7,1),(7,'2020-07-29 17:34:11.099259','1','Баннер 1',1,'[{\"added\": {}}]',8,1),(8,'2020-07-29 17:34:33.000274','2','Баннер 2',1,'[{\"added\": {}}]',8,1),(9,'2020-07-29 17:34:51.360415','3','Баннер 3',1,'[{\"added\": {}}]',8,1),(10,'2020-07-29 17:35:32.916824','1','Баннер 4',1,'[{\"added\": {}}]',9,1),(11,'2020-07-29 17:36:18.815375','1','Бренд 1',1,'[{\"added\": {}}]',10,1),(12,'2020-07-29 17:36:33.043928','2','Бренд 2',1,'[{\"added\": {}}]',10,1),(13,'2020-07-29 17:36:44.068315','3','Бренд 3',1,'[{\"added\": {}}]',10,1),(14,'2020-07-29 17:36:54.478163','4','Бренд 4',1,'[{\"added\": {}}]',10,1),(15,'2020-07-29 17:37:04.126526','5','Бренд 5',1,'[{\"added\": {}}]',10,1),(16,'2020-07-29 17:37:15.021759','6','Бренд 6',1,'[{\"added\": {}}]',10,1),(17,'2020-07-29 17:37:47.654815','1','Баннер категория',1,'[{\"added\": {}}]',11,1);
+INSERT INTO `django_admin_log` VALUES (1,'2020-07-29 15:28:38.283023','1','Магазин АНРИ',1,'[{\"added\": {}}]',12,1),(2,'2020-07-29 17:28:43.910953','1','Слайдер 1',1,'[{\"added\": {}}]',15,1),(3,'2020-07-29 17:30:09.118559','2','Слайдер 2',1,'[{\"added\": {}}]',15,1),(4,'2020-07-29 17:32:51.746348','1','Баннер',1,'[{\"added\": {}}]',7,1),(5,'2020-07-29 17:32:56.639406','1','Баннер',2,'[{\"changed\": {\"fields\": [\"\\u041e\\u043f\\u0443\\u0431\\u043b\\u0438\\u043a\\u043e\\u0432\\u0430\\u043d \\u043d\\u0430 \\u0433\\u043b\\u0430\\u0432\\u043d\\u043e\\u0439\"]}}]',7,1),(6,'2020-07-29 17:33:28.717460','1','Баннер',2,'[{\"changed\": {\"fields\": [\"\\u0418\\u0437\\u043e\\u0431\\u0440\\u0430\\u0436\\u0435\\u043d\\u0438\\u0435 \\u0431\\u0430\\u043d\\u043d\\u0435\\u0440\\u0430\"]}}]',7,1),(7,'2020-07-29 17:34:11.099259','1','Баннер 1',1,'[{\"added\": {}}]',8,1),(8,'2020-07-29 17:34:33.000274','2','Баннер 2',1,'[{\"added\": {}}]',8,1),(9,'2020-07-29 17:34:51.360415','3','Баннер 3',1,'[{\"added\": {}}]',8,1),(10,'2020-07-29 17:35:32.916824','1','Баннер 4',1,'[{\"added\": {}}]',9,1),(11,'2020-07-29 17:36:18.815375','1','Бренд 1',1,'[{\"added\": {}}]',10,1),(12,'2020-07-29 17:36:33.043928','2','Бренд 2',1,'[{\"added\": {}}]',10,1),(13,'2020-07-29 17:36:44.068315','3','Бренд 3',1,'[{\"added\": {}}]',10,1),(14,'2020-07-29 17:36:54.478163','4','Бренд 4',1,'[{\"added\": {}}]',10,1),(15,'2020-07-29 17:37:04.126526','5','Бренд 5',1,'[{\"added\": {}}]',10,1),(16,'2020-07-29 17:37:15.021759','6','Бренд 6',1,'[{\"added\": {}}]',10,1),(17,'2020-07-29 17:37:47.654815','1','Баннер категория',1,'[{\"added\": {}}]',11,1),(18,'2020-07-30 06:27:22.964333','1','Баннер',2,'[{\"changed\": {\"fields\": [\"\\u0418\\u0437\\u043e\\u0431\\u0440\\u0430\\u0436\\u0435\\u043d\\u0438\\u0435 \\u0431\\u0430\\u043d\\u043d\\u0435\\u0440\\u0430\"]}}]',7,1),(19,'2020-07-30 06:27:37.233385','1','Баннер 4',2,'[{\"changed\": {\"fields\": [\"\\u0418\\u0437\\u043e\\u0431\\u0440\\u0430\\u0436\\u0435\\u043d\\u0438\\u0435 \\u0431\\u0430\\u043d\\u0435\\u0440\\u0430\"]}}]',9,1),(20,'2020-07-30 06:27:49.791073','1','Баннер 1',2,'[{\"changed\": {\"fields\": [\"Image\"]}}]',8,1),(21,'2020-07-30 06:27:58.455344','2','Баннер 2',2,'[{\"changed\": {\"fields\": [\"Image\"]}}]',8,1),(22,'2020-07-30 06:28:05.758842','3','Баннер 3',2,'[{\"changed\": {\"fields\": [\"Image\"]}}]',8,1),(23,'2020-07-30 06:28:19.179283','1','Баннер категория',2,'[{\"changed\": {\"fields\": [\"\\u0418\\u0437\\u043e\\u0431\\u0440\\u0430\\u0436\\u0435\\u043d\\u0438\\u0435\"]}}]',11,1),(24,'2020-07-30 06:28:49.057712','1','Слайдер 1',2,'[{\"changed\": {\"fields\": [\"\\u0418\\u0437\\u043e\\u0431\\u0440\\u0430\\u0436\\u0435\\u043d\\u0438\\u0435 \\u0441\\u043b\\u0430\\u0439\\u0434\\u0430\"]}}]',15,1),(25,'2020-07-30 06:28:57.706219','2','Слайдер 2',2,'[{\"changed\": {\"fields\": [\"\\u0418\\u0437\\u043e\\u0431\\u0440\\u0430\\u0436\\u0435\\u043d\\u0438\\u0435 \\u0441\\u043b\\u0430\\u0439\\u0434\\u0430\"]}}]',15,1),(26,'2020-07-30 12:57:48.473467','2','mfalcon@mail.ru',3,'',16,1),(27,'2020-07-30 12:57:48.478157','1','mfalcon@mail.ru',3,'',16,1),(28,'2020-07-30 13:02:49.196383','1','Слайдер 1',2,'[]',15,1),(29,'2020-07-30 13:02:52.571062','2','Слайдер 2',2,'[]',15,1),(30,'2020-07-30 13:06:16.496062','1','Слайдер 1',2,'[{\"changed\": {\"fields\": [\"\\u0418\\u0437\\u043e\\u0431\\u0440\\u0430\\u0436\\u0435\\u043d\\u0438\\u0435 \\u0441\\u043b\\u0430\\u0439\\u0434\\u0430\"]}}]',15,1),(31,'2020-07-30 13:06:23.368957','2','Слайдер 2',2,'[{\"changed\": {\"fields\": [\"\\u0418\\u0437\\u043e\\u0431\\u0440\\u0430\\u0436\\u0435\\u043d\\u0438\\u0435 \\u0441\\u043b\\u0430\\u0439\\u0434\\u0430\"]}}]',15,1);
 /*!40000 ALTER TABLE `django_admin_log` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -258,7 +258,7 @@ CREATE TABLE `django_migrations` (
   `name` varchar(255) NOT NULL,
   `applied` datetime(6) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=19 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=20 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -267,7 +267,7 @@ CREATE TABLE `django_migrations` (
 
 LOCK TABLES `django_migrations` WRITE;
 /*!40000 ALTER TABLE `django_migrations` DISABLE KEYS */;
-INSERT INTO `django_migrations` VALUES (1,'contenttypes','0001_initial','2020-07-29 14:28:38.899032'),(2,'auth','0001_initial','2020-07-29 14:28:38.964542'),(3,'admin','0001_initial','2020-07-29 14:28:39.127534'),(4,'admin','0002_logentry_remove_auto_add','2020-07-29 14:28:39.177663'),(5,'admin','0003_logentry_add_action_flag_choices','2020-07-29 14:28:39.189292'),(6,'contenttypes','0002_remove_content_type_name','2020-07-29 14:28:39.239422'),(7,'auth','0002_alter_permission_name_max_length','2020-07-29 14:28:39.262701'),(8,'auth','0003_alter_user_email_max_length','2020-07-29 14:28:39.285325'),(9,'auth','0004_alter_user_username_opts','2020-07-29 14:28:39.293858'),(10,'auth','0005_alter_user_last_login_null','2020-07-29 14:28:39.312541'),(11,'auth','0006_require_contenttypes_0002','2020-07-29 14:28:39.314468'),(12,'auth','0007_alter_validators_add_error_messages','2020-07-29 14:28:39.325518'),(13,'auth','0008_alter_user_username_max_length','2020-07-29 14:28:39.350255'),(14,'auth','0009_alter_user_last_name_max_length','2020-07-29 14:28:39.370798'),(15,'auth','0010_alter_group_name_max_length','2020-07-29 14:28:39.389911'),(16,'auth','0011_update_proxy_permissions','2020-07-29 14:28:39.397957'),(17,'sessions','0001_initial','2020-07-29 14:28:39.407171'),(18,'shop','0001_initial','2020-07-29 14:28:39.521565');
+INSERT INTO `django_migrations` VALUES (1,'contenttypes','0001_initial','2020-07-29 14:28:38.899032'),(2,'auth','0001_initial','2020-07-29 14:28:38.964542'),(3,'admin','0001_initial','2020-07-29 14:28:39.127534'),(4,'admin','0002_logentry_remove_auto_add','2020-07-29 14:28:39.177663'),(5,'admin','0003_logentry_add_action_flag_choices','2020-07-29 14:28:39.189292'),(6,'contenttypes','0002_remove_content_type_name','2020-07-29 14:28:39.239422'),(7,'auth','0002_alter_permission_name_max_length','2020-07-29 14:28:39.262701'),(8,'auth','0003_alter_user_email_max_length','2020-07-29 14:28:39.285325'),(9,'auth','0004_alter_user_username_opts','2020-07-29 14:28:39.293858'),(10,'auth','0005_alter_user_last_login_null','2020-07-29 14:28:39.312541'),(11,'auth','0006_require_contenttypes_0002','2020-07-29 14:28:39.314468'),(12,'auth','0007_alter_validators_add_error_messages','2020-07-29 14:28:39.325518'),(13,'auth','0008_alter_user_username_max_length','2020-07-29 14:28:39.350255'),(14,'auth','0009_alter_user_last_name_max_length','2020-07-29 14:28:39.370798'),(15,'auth','0010_alter_group_name_max_length','2020-07-29 14:28:39.389911'),(16,'auth','0011_update_proxy_permissions','2020-07-29 14:28:39.397957'),(17,'sessions','0001_initial','2020-07-29 14:28:39.407171'),(18,'shop','0001_initial','2020-07-29 14:28:39.521565'),(19,'shop','0002_auto_20200730_1601','2020-07-30 13:01:24.594871');
 /*!40000 ALTER TABLE `django_migrations` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -322,7 +322,7 @@ CREATE TABLE `shop_banner` (
 
 LOCK TABLES `shop_banner` WRITE;
 /*!40000 ALTER TABLE `shop_banner` DISABLE KEYS */;
-INSERT INTO `shop_banner` VALUES (1,'Баннер','banners/banner_upper/rhs-banner_A8D7bLj.jpg','',1);
+INSERT INTO `shop_banner` VALUES (1,'Баннер','banners/banner_upper/rhs-banner_PCpsnKc.jpg','',1);
 /*!40000 ALTER TABLE `shop_banner` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -351,7 +351,7 @@ CREATE TABLE `shop_banner3` (
 
 LOCK TABLES `shop_banner3` WRITE;
 /*!40000 ALTER TABLE `shop_banner3` DISABLE KEYS */;
-INSERT INTO `shop_banner3` VALUES (1,'Баннер 1','banners/3_in_block/offer-banner1_XUPkGyz.jpg','',1),(2,'Баннер 2','banners/3_in_block/offer-banner1_nZYhQsN.jpg','',1),(3,'Баннер 3','banners/3_in_block/offer-banner1_QBbvPYV.jpg','',1);
+INSERT INTO `shop_banner3` VALUES (1,'Баннер 1','banners/3_in_block/offer-banner1_9uPSyYg.jpg','',1),(2,'Баннер 2','banners/3_in_block/offer-banner2_eh605AG.jpg','',1),(3,'Баннер 3','banners/3_in_block/offer-banner3_0tpsefz.jpg','',1);
 /*!40000 ALTER TABLE `shop_banner3` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -380,7 +380,7 @@ CREATE TABLE `shop_bannerl` (
 
 LOCK TABLES `shop_bannerl` WRITE;
 /*!40000 ALTER TABLE `shop_bannerl` DISABLE KEYS */;
-INSERT INTO `shop_bannerl` VALUES (1,'Баннер 4','banners/banner_large/jewelry-banner_oOoMnbC.jpg','',1);
+INSERT INTO `shop_bannerl` VALUES (1,'Баннер 4','banners/banner_large/jewelry-banner_QHQ0a7R.jpg','',1);
 /*!40000 ALTER TABLE `shop_bannerl` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -438,7 +438,7 @@ CREATE TABLE `shop_catbanner` (
 
 LOCK TABLES `shop_catbanner` WRITE;
 /*!40000 ALTER TABLE `shop_catbanner` DISABLE KEYS */;
-INSERT INTO `shop_catbanner` VALUES (1,'Баннер категория','banners/category_banners/category-banner1_1vBZlkI.jpg','',1);
+INSERT INTO `shop_catbanner` VALUES (1,'Баннер категория','banners/category_banners/category-banner1_XejLg7b.jpg','',1);
 /*!40000 ALTER TABLE `shop_catbanner` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -566,7 +566,7 @@ CREATE TABLE `shop_slider` (
 
 LOCK TABLES `shop_slider` WRITE;
 /*!40000 ALTER TABLE `shop_slider` DISABLE KEYS */;
-INSERT INTO `shop_slider` VALUES (1,'Слайдер 1','ВЕСЬ АВГУСТ!','Скидка на косметику 10%','только для держателей дисконтных карт','slider/slide-img1_85NjECe.jpg','',1,'',1),(2,'Слайдер 2','НОВИНКИ!','Новое пополнение коллекций','','slider/slide-img2_mXseCZo.jpg','',1,'',1);
+INSERT INTO `shop_slider` VALUES (1,'Слайдер 1','ВЕСЬ АВГУСТ!','Скидка на косметику 10%','только для держателей дисконтных карт','slider/slide-img1_OuZ62HT.jpg','',1,'',1),(2,'Слайдер 2','НОВИНКИ!','Новое пополнение коллекций','','slider/slide-img2_AIYMJ2c.jpg','',1,'',1);
 /*!40000 ALTER TABLE `shop_slider` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -581,8 +581,9 @@ CREATE TABLE `shop_subscribe` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `mail` varchar(50) NOT NULL,
   `agreement` tinyint(1) NOT NULL,
-  PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `shop_subscribe_mail_650bcfca_uniq` (`mail`)
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -591,6 +592,7 @@ CREATE TABLE `shop_subscribe` (
 
 LOCK TABLES `shop_subscribe` WRITE;
 /*!40000 ALTER TABLE `shop_subscribe` DISABLE KEYS */;
+INSERT INTO `shop_subscribe` VALUES (3,'mfalcon@mail.ru',1),(4,'checkago@yandex.ru',1);
 /*!40000 ALTER TABLE `shop_subscribe` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -603,4 +605,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2020-07-29 22:40:51
+-- Dump completed on 2020-07-31  0:15:12
