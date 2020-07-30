@@ -1,0 +1,21 @@
+<form class="kt-form" method="post" id="kt_form">
+                                {% csrf_token %}
+                                <!--begin: Form Wizard Step 1-->
+                                <div class="kt-wizard-v2__content" data-ktwizard-type="step-content" data-ktwizard-state="current">
+                                    <div class="kt-heading kt-heading--md">Регистрационные данные</div>
+                                    <div class="kt-form__section kt-form__section--first">
+                                        <div class="kt-wizard-v2__form">
+                                            <div class="row">
+                                                <div class="form-group col-xl-4">
+                                                    <label><strong>{{ form.last_name.label }}</strong></label>
+                                                    {% crispy_field form.last_name 'class' 'form-control' %}
+                                                </div>
+                                                <div class="form-group col-xl-4">
+                                                    <label><strong>{{ form.name.label }}</strong></label>
+                                                    {% crispy_field form.name 'class' 'form-control' %}
+                                                </div>
+                                                <div class="form-group col-xl-4">
+                                                    <label><strong>{{ form.surname.label }}</strong></label>
+                                                    {% crispy_field form.surname 'class' 'form-control' %}
+                                                </div>
+                                            </div>

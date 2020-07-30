@@ -1,0 +1,242 @@
+﻿{% load static %}
+{% load crispy_forms_tags %}
+{% load crispy_forms_field %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<!--[if IE]>
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<![endif]-->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="">
+<meta name="author" content="">
+<title>{{ title }}</title>
+
+<!-- Favicons Icon -->
+
+
+<!-- Mobile Specific -->
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+<!-- CSS Style -->
+<link rel="stylesheet" href={% static "css/animate.css" %} type="text/css">
+<link rel="stylesheet" href={% static "css/bootstrap.min.css" %} type="text/css">
+<link rel="stylesheet" href={% static "css/style.css" %} type="text/css">
+<link rel="stylesheet" href={% static "css/revslider.css" %} type="text/css">
+<link rel="stylesheet" href={% static "css/owl.carousel.css" %} type="text/css">
+<link rel="stylesheet" href={% static "css/owl.theme.css" %} type="text/css">
+<link rel="stylesheet" href={% static "css/font-awesome.css" %} type="text/css">
+
+<script src="https://use.fontawesome.com/e4b4729be4.js"></script>
+
+
+<!-- Google Fonts -->
+<link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,300,700,800,400,600' rel='stylesheet' type='text/css'>
+</head>
+
+<body>
+<div class="page"> 
+
+{% include '_header.html' %}
+
+{% include '_menu.html' %}
+
+  {% block content %}
+  {% endblock %}
+  
+  <footer class="footer wow bounceInUp animated">
+    {% include '_brands_logo.html' %}
+    <div class="footer-top">
+      <div class="container">
+        <div class="row">
+          <div class="col-xs-12 col-sm-6 col-md-7">
+            <div class="block-subscribe">
+              <div class="newsletter">
+                <form method="POST">
+                    {% csrf_token %}
+                  <h4>Подписка</h4>
+                    {% crispy_field form.mail 'class' 'input-text required-entry validate-email' %}
+                  <!-- <input type="text" placeholder="Введите ваш email" class="input-text required-entry validate-email" title="Подпишитесь на наши новости" id="newsletter1" name="email"> -->
+                  <button class="subscribe" title="Subscribe" type="submit"><span>Подписаться</span></button>
+                </form>
+              </div>
+            </div>
+          </div>
+          <div class="col-xs-12 col-sm-6 col-md-5">
+            <div class="social">
+              <ul>
+                <li class="fb"><a href="#"></a></li>
+                <li class="tw"><a href="#"></a></li>
+                <li class="googleplus"><a href="#"></a></li>
+                <li class="rss"><a href="#"></a></li>
+                <li class="pintrest"><a href="#"></a></li>
+                <li class="linkedin"><a href="#"></a></li>
+                <li class="youtube"><a href="#"></a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="footer-middle container">
+      <div class="row">
+        <div class="col-md-3 col-sm-4">
+          {% for Contact in contacts %}
+            <div class="footer-logo"><a href="index.html" title="Logo"><img src="{{ Contact.image.url }}" alt="logo"></a></div>
+          <p>{{ Contact.desc | safe  }} </p>
+            {% endfor %}
+          <div class="payment-accept">
+            <div><img src={% static "images/payment-1.png" %} alt="Способы оплаты"> <img src={% static "images/payment-2.png" %} alt="payment"> <img src={% static "images/payment-3.png" %} alt="payment"> <img src={% static "images/payment-4.png" %} alt="payment"></div>
+          </div>
+        </div>
+        <div class="col-md-2 col-sm-4">
+          <h4>Руководство</h4>
+          <ul class="links">
+            <li class="first"><a href="#" title="How to buy">Как купить?</a></li>
+            <li><a href="faq.html" title="FAQs">FAQs</a></li>
+            <li><a href="#" title="Payment">Оплата</a></li>
+            <li><a href="#" title="Shipment&lt;/a&gt;">Доставка</a></li>
+            <li><a href="#" title="Where is my order?">Согласшение</a></li>
+            <li class="last"><a href="#" title="Return policy">Политика возврата</a></li>
+          </ul>
+        </div>
+        <div class="col-md-2 col-sm-4">
+          <h4>Советник по стилю </h4>
+          <ul class="links">
+            <li class="first"><a title="Your Account" href="login.html">Ваш аккаунт</a></li>
+            <li><a title="Information" href="#">Информация</a></li>
+            <li><a title="Addresses" href="#">Адреса</a></li>
+            <li><a title="Addresses" href="#">Скидка</a></li>
+            <li><a title="Orders History" href="#">История заказов</a></li>
+            <li class="last"><a title=" Additional Information" href="#">Дополнительная информация</a></li>
+          </ul>
+        </div>
+        <div class="col-md-2 col-sm-4">
+          <h4>Информация</h4>
+          <ul class="links">
+            <li class="first"><a href="#" title="Персональные данные">Персональные данные</a></li>
+            <li><a href="#/" title="Условия поиска">Условия поиска</a></li>
+            <li><a href="#" title="Расширенный поиск">Расширенный поиск</a></li>
+            <li><a href="{% url 'contact_us' %}" title="Связаться с нами">Контакты</a></li>
+            <li class=" last"><a href="#" title="Наши магазины" class="link-rss">Наши магазины</a></li>
+          </ul>
+        </div>
+        <div class="col-md-3 col-sm-4">
+          <h4>Контакты</h4>
+          <div class="contacts-info">
+              {%  for Contact in contacts %}
+            <address>
+            <i class="add-icon">&nbsp;</i> {{ Contact.adress }}
+            </address>
+            <div class="phone-footer"><i class="phone-icon">&nbsp;</i> {{ Contact.phone }}</div>
+            <div class="email-footer"><i class="email-icon">&nbsp;</i> <a href="#">{{ Contact.mail }}</a> </div>
+              {% endfor %}
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-5 col-xs-12 coppyright"> &copy; 2020. Разработанно студией <a href="#">revenant-it.ru</a> </div>
+
+            <!-- <div class="col-sm-7 col-xs-12 company-links">
+                <ul class="links">
+                <li><a href="#" title="Magento Themes">Magento Themes</a></li>
+                <li><a href="#" title="Premium Themes">Premium Themes</a></li>
+                <li><a href="#" title="Responsive Themes">Responsive Themes</a></li>
+                <li class="last"><a href="#" title="Magento Extensions">Magento Extensions</a></li>
+                </ul>
+            </div> -->
+
+        </div>
+      </div>
+    </div>
+  </footer>
+  <!-- End Footer --> 
+  
+</div>
+<!-- JavaScript --> 
+<script type="text/javascript" src={% static "js/jquery.min.js" %}></script>
+<script type="text/javascript" src={% static "js/bootstrap.min.js" %}></script>
+<script type="text/javascript" src={% static "js/parallax.js" %}></script>
+<script type="text/javascript" src={% static "js/common.js" %}></script>
+<script type="text/javascript" src={% static "js/revslider.js" %}></script>
+<script type="text/javascript" src={% static "js/owl.carousel.min.js" %}></script>
+
+
+<script type='text/javascript'>
+        jQuery(document).ready(function(){
+            jQuery('#rev_slider_4').show().revolution({
+                dottedOverlay: 'none',
+                delay: 5000,
+                startwidth: 770,
+                startheight: 460,
+
+                hideThumbs: 200,
+                thumbWidth: 200,
+                thumbHeight: 50,
+                thumbAmount: 2,
+
+                navigationType: 'thumb',
+                navigationArrows: 'solo',
+                navigationStyle: 'round',
+
+                touchenabled: 'on',
+                onHoverStop: 'on',
+                
+                swipe_velocity: 0.7,
+                swipe_min_touches: 1,
+                swipe_max_touches: 1,
+                drag_block_vertical: false,
+            
+                spinner: 'spinner0',
+                keyboardNavigation: 'off',
+
+                navigationHAlign: 'center',
+                navigationVAlign: 'bottom',
+                navigationHOffset: 0,
+                navigationVOffset: 20,
+
+                soloArrowLeftHalign: 'left',
+                soloArrowLeftValign: 'center',
+                soloArrowLeftHOffset: 20,
+                soloArrowLeftVOffset: 0,
+
+                soloArrowRightHalign: 'right',
+                soloArrowRightValign: 'center',
+                soloArrowRightHOffset: 20,
+                soloArrowRightVOffset: 0,
+
+                shadow: 0,
+                fullWidth: 'on',
+                fullScreen: 'off',
+
+                stopLoop: 'off',
+                stopAfterLoops: -1,
+                stopAtSlide: -1,
+
+                shuffle: 'off',
+
+                autoHeight: 'off',
+                forceFullWidth: 'on',
+                fullScreenAlignForce: 'off',
+                minFullScreenHeight: 0,
+                hideNavDelayOnMobile: 1500,
+            
+                hideThumbsOnMobile: 'off',
+                hideBulletsOnMobile: 'off',
+                hideArrowsOnMobile: 'off',
+                hideThumbsUnderResolution: 0,
+
+                hideSliderAtLimit: 0,
+                hideCaptionAtLimit: 0,
+                hideAllCaptionAtLilmit: 0,
+                startWithSlide: 0,
+                fullScreenOffsetContainer: ''
+            });
+        });
+    </script>
+</body>
+</html>

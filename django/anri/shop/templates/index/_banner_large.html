@@ -1,0 +1,14 @@
+{% load static %}
+
+
+ <!-- promo banner section -->
+  <div class="promo-banner-section container wow bounceInUp animated">
+    <div class="row">
+        {% for BannerL in bannerls %}
+            {% if BannerL.publish == True %}
+      <div class="col-lg-12"> <img alt="promo-banner3" src="media/{{ BannerL.image }}"></div>
+            {% endif %}
+        {% endfor %}
+    </div>
+  </div>
+  <!-- End promo banner section -->

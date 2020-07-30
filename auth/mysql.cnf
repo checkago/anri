@@ -1,0 +1,5 @@
+[client]
+database = 'anri'
+user = 'anri'
+password = 'c41916312'
+default-character-set = 'utf8'
